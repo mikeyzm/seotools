@@ -530,6 +530,10 @@ class SEOMeta implements MetaTagsContract
      */
     public function getCanonical()
     {
+        if (false === $this->canonical) {
+            return;
+        }
+
         $canonical_config = $this->config->get('defaults.canonical', false);
 
         return $this->canonical ?: (($canonical_config === null) ? app('url')->current() : $canonical_config);
