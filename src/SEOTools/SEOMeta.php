@@ -157,7 +157,7 @@ class SEOMeta implements MetaTagsContract
         }
 
         if (!empty($keywords)) {
-            $keywords = implode(', ', $keywords);
+            $keywords = implode(',', $keywords);
             $html[] = "<meta name=\"keywords\" content=\"{$keywords}\">";
         }
 
